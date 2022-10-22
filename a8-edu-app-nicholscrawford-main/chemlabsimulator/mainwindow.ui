@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>801</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Chem Lab Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="backgroundImageWidget" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>801</width>
+      <height>600</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#backgroundImageWidget{
+background-image: url(:/backgroundImage/img/backgroundImage.png);
+}</string>
+    </property>
+    <widget class="QLabel" name="reactionDescriptionLabel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>20</y>
+       <width>331</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>Select a reaction to start.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="hydrogenGas">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>101</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Hydrogen (2H&lt;sub&gt;2&lt;/sub&gt;)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Hydrogen Gas</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="oxygenGas">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>120</y>
+       <width>101</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Oxygen (O&lt;sub&gt;2&lt;/sub&gt;)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Oxygen Gas</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="reactionEquationLabel">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>460</y>
+       <width>351</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+font-family: Chalkduster, fantasy;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>Equation</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="beakerLabel">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>160</y>
+       <width>201</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Beaker Here</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="calciumLabel">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>300</y>
+       <width>91</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Calcium (Ca)</string>
+     </property>
+     <property name="text">
+      <string>Calcium</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="propane">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>280</y>
+       <width>71</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Propane (C&lt;sub&gt;6&lt;/sub&gt;H&lt;sub&gt;8&lt;/sub&gt;)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Propane</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="energy">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>280</y>
+       <width>71</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Heat</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>fire</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="water">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>51</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Water (H&lt;sub&gt;2&lt;/sub&gt;O)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Water</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sodiumMetal">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>190</y>
+       <width>101</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Sodium (Na)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Sodium Metal</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="potassiumMetal">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>190</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Potassium (K)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Potassium Metal</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ferricChloride">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>30</y>
+       <width>51</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Ferric Chloride (FeCl&lt;sub&gt;3&lt;/sub&gt;)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Ferric Chloride</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="phenol">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>110</y>
+       <width>91</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Phenol (3C&lt;sub&gt;6&lt;/sub&gt;H&lt;sub&gt;5&lt;/sub&gt;OH)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>Phenol</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="burnerLabel">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>200</y>
+       <width>141</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Burner Here</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="flameLabel">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>50</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>flame here</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="startBurnerButton">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>400</y>
+       <width>100</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>start burner</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="resetButton">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>520</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: Chalkduster, fantasy;
+background-color:transparent;
+color: white;
+border: 2px solid white;
+</string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="infoButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>50</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>i</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lithiumLabel">
+     <property name="geometry">
+      <rect>
+       <x>687</x>
+       <y>285</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Lithium (Li)</string>
+     </property>
+     <property name="text">
+      <string>litttyum</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="copperLabel">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>115</y>
+       <width>71</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Copper (Co)</string>
+     </property>
+     <property name="text">
+      <string>copper</string>
+     </property>
+    </widget>
+    <widget class="SceneWindow" name="physicsScene" native="true">
+     <property name="geometry">
+      <rect>
+       <x>289</x>
+       <y>169</y>
+       <width>231</width>
+       <height>231</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="explosionLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>661</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tutorialTextLabel">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>460</y>
+       <width>131</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="startTutorialPushButton">
+     <property name="geometry">
+      <rect>
+       <x>74</x>
+       <y>460</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: Bradley Hand, cursive;</string>
+     </property>
+     <property name="text">
+      <string>Start Tutorial</string>
+     </property>
+    </widget>
+    <zorder>explosionLabel</zorder>
+    <zorder>reactionDescriptionLabel</zorder>
+    <zorder>hydrogenGas</zorder>
+    <zorder>oxygenGas</zorder>
+    <zorder>reactionEquationLabel</zorder>
+    <zorder>beakerLabel</zorder>
+    <zorder>calciumLabel</zorder>
+    <zorder>propane</zorder>
+    <zorder>energy</zorder>
+    <zorder>water</zorder>
+    <zorder>sodiumMetal</zorder>
+    <zorder>potassiumMetal</zorder>
+    <zorder>ferricChloride</zorder>
+    <zorder>phenol</zorder>
+    <zorder>burnerLabel</zorder>
+    <zorder>flameLabel</zorder>
+    <zorder>startBurnerButton</zorder>
+    <zorder>resetButton</zorder>
+    <zorder>infoButton</zorder>
+    <zorder>lithiumLabel</zorder>
+    <zorder>copperLabel</zorder>
+    <zorder>physicsScene</zorder>
+    <zorder>tutorialTextLabel</zorder>
+    <zorder>startTutorialPushButton</zorder>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSelect">
+    <property name="title">
+     <string>Select Reaction</string>
+    </property>
+    <addaction name="selectMakingWater"/>
+    <addaction name="selectBurningFuel"/>
+    <addaction name="selectMetalFlameTest"/>
+    <addaction name="selectColorChange"/>
+   </widget>
+   <addaction name="menuSelect"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="selectMakingWater">
+   <property name="text">
+    <string>Making Water</string>
+   </property>
+  </action>
+  <action name="selectBurningFuel">
+   <property name="text">
+    <string>Burning Fuel</string>
+   </property>
+  </action>
+  <action name="selectMetalFlameTest">
+   <property name="text">
+    <string>Metal Flame Test</string>
+   </property>
+  </action>
+  <action name="selectColorChange">
+   <property name="text">
+    <string>Color Change</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SceneWindow</class>
+   <extends>QWidget</extends>
+   <header>scenewindow.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

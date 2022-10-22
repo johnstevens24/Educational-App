@@ -1,0 +1,5 @@
+Synthesis is a basic type of chemical reaction that takes two things and makes one new thing.
+
+To make water, one mixes hydrogen gas and oxygen gas together and applies heat/energy. Without this energy, the bonds holding the gasses together won’t break to be reformed into water which is why even though there is plenty of hydrogen gas and oxygen in the air you don’t see them randomly combining to make water.
+
+The reaction is actually quite favorable though. The reaction releases much more energy than is necessary to start the reaction. This is why there is a loud pop and an explosion when performing this reaction.

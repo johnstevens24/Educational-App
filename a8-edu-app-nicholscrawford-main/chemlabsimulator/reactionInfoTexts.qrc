@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>textInfo/combustion of propane info.txt</file>
+        <file>textInfo/flame test info.txt</file>
+        <file>textInfo/phenol fecl3 info.txt</file>
+        <file>textInfo/water reaction info.txt</file>
+    </qresource>
+</RCC>
